@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "productWorkingName": "StudySprout",
+  "primaryAudience": "parents",
+  "secondaryAudience": "children approximately 9-17",
+  "coreThesis": "AI should help children become more capable and independent, not more dependent.",
+  "hero": {
+    "eyebrow": "AI WILL BE PART OF THEIR WORLD.",
+    "headlineLine1": "They're going to use AI.",
+    "headlineLine2": "Help them learn how to use it well.",
+    "body": "A learning tool that explains, questions, and practices with kids — then gradually steps out of the way.",
+    "primaryCta": "See how it works",
+    "secondaryCta": "For parents",
+    "requiredImage": "/assets/hero-child-robot.svg",
+    "imageAltMustMention": ["child", "robot", "paper"]
+  },
+  "marketGap": {
+    "headline": "AI is already here. Guidance isn't.",
+    "primaryStat": "86%",
+    "primaryStatLabel": "of U.S. children ages 9–17 surveyed in 2026 reported using AI",
+    "sourceLabel": "Common Sense Media, 2026",
+    "sourceUrl": "https://www.commonsensemedia.org/research/a-comprehensive-report-on-teens-tweens-and-ai",
+    "supportingFact": "More than 4 in 10 surveyed children said no parent or guardian had ever talked with them about AI safety."
+  },
+  "principles": [
+    {"id": "ask", "title": "Ask", "body": "Start with the question."},
+    {"id": "think", "title": "Think", "body": "Get a hint, not the answer."},
+    {"id": "try", "title": "Try alone", "body": "Practice without help."}
+  ],
+  "independenceQuote": "Sometimes the best thing our AI can say is: “Try this one without me.”",
+  "requiredTestIds": ["site-header","hero","hero-title","hero-image","hero-primary-cta","hero-secondary-cta","market-gap","proof-stat","source-link","principles","principle-ask","principle-think","principle-try","independence-quote","site-footer"],
+  "viewports": {
+    "desktop": {"width": 1440, "height": 1000},
+    "tablet": {"width": 834, "height": 1112},
+    "mobile": {"width": 390, "height": 844}
+  },
+  "mobileHeroImage": {"mustBeVisible": true,"maxTopPx": 650,"minWidthPx": 320,"minHeightPx": 210},
+  "contentLimits": {"maxTopLevelSectionsBeforeFooter": 5,"maxHeroBodyWords": 24,"maxCardsInAnySingleRow": 3},
+  "forbiddenMarketingTerms": ["unlock your potential","transformative","seamless","personalized learning journey","cutting-edge","revolutionize","supercharge","game-changer","future-proof","harness the power"],
+  "forbiddenEngagementPatterns": ["streak","limited time","don't miss out","daily reward","AI best friend","AI buddy"]
+}

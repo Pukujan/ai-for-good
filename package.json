@@ -1,0 +1,35 @@
+{
+  "name": "ai-for-good-learning-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4173",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "lint": "eslint .",
+    "validate:static": "node scripts/quality/validate-static.mjs",
+    "test:e2e": "playwright test tests/acceptance --grep-invert @screenshot",
+    "screenshots": "playwright test tests/acceptance/screenshots.spec.ts",
+    "validate": "npm run lint && npm run build && npm run validate:static && npm run test:e2e && npm run screenshots"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "latest",
+    "@eslint/js": "latest",
+    "@playwright/test": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-plugin-react-hooks": "latest",
+    "eslint-plugin-react-refresh": "latest",
+    "globals": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest"
+  }
+}

@@ -1,0 +1,36 @@
+name: site-quality
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  contract-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git fetch origin main
+      - run: node scripts/quality/check-protected-files.mjs
+  implementation-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run lint
+      - run: npm run build
+      - run: npm run validate:static
+      - run: npm run test:e2e
+      - run: npm run screenshots
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: responsive-site-screenshots
+          path: artifacts/screenshots
+          if-no-files-found: error
