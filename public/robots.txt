@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.design-bakery.com/ai-for-good/sitemap.xml

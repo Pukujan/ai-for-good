@@ -6,6 +6,8 @@ const navigation = [
   { label: 'For parents', href: '#for-parents' },
 ];
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,7 +26,7 @@ function App() {
     <div className="site-shell">
       <header className="site-header" data-testid="site-header">
         <a className="wordmark" href="#top" aria-label="StudySprout home">
-          <img src="/brand/sprout-mark.svg" alt="" aria-hidden="true" />
+          <img src={assetPath('brand/sprout-mark.svg')} alt="" aria-hidden="true" />
           <span>Study<span>Sprout</span></span>
         </a>
 
@@ -85,9 +87,9 @@ function App() {
             <div className="visual-label"><span className="dot" aria-hidden="true" /> A different kind of help</div>
             <div className="hero-image-frame">
               <picture>
-                <source type="image/png" srcSet="/assets/hero-child-robot.png" />
+                <source type="image/png" srcSet={assetPath('assets/hero-child-robot.png')} />
                 <img
-                  src="/assets/hero-child-robot.svg"
+                  src={assetPath('assets/hero-child-robot.svg')}
                   alt="Child writing on paper beside a small robot tutor"
                   data-testid="hero-image"
                 />
@@ -148,7 +150,7 @@ function App() {
             <h2 id="independence-title" data-testid="independence-quote">Sometimes the best thing our AI can say is: <em>“Try this one without me.”</em></h2>
           </div>
           <div className="parent-invite">
-            <p>For parents who want their kids to be ready for what's next — and able to think through it themselves.</p>
+            <p>For parents who want their kids to be ready for what's next, and able to think through it themselves.</p>
             <a className="text-link" href="mailto:hello@studysprout.example">Talk with us <span aria-hidden="true">↗</span></a>
           </div>
         </section>
@@ -156,7 +158,7 @@ function App() {
 
       <footer className="site-footer section-frame" data-testid="site-footer">
         <a className="wordmark footer-wordmark" href="#top" aria-label="StudySprout home">
-          <img src="/brand/sprout-mark.svg" alt="" aria-hidden="true" />
+          <img src={assetPath('brand/sprout-mark.svg')} alt="" aria-hidden="true" />
           <span>Study<span>Sprout</span></span>
         </a>
         <p>Learning with AI. Thinking for yourself.</p>
