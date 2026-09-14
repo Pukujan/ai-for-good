@@ -4,9 +4,11 @@ This repository uses an acceptance-contract workflow. Treat the contract files a
 
 ## Before coding
 
-Read `spec/site-contract.json`, `docs/BRAND.md`, `docs/BUILD_SPEC.md`, `docs/VALIDATION.md`, `docs/LUNA_TASK.md`, `design/REFERENCE.md`, and every file in `tests/acceptance/`.
+Read `docs/DESIGN_TO_BUILD_PLAYBOOK.md`, `spec/site-contract.json`, `docs/BRAND.md`, `docs/BUILD_SPEC.md`, `docs/VALIDATION.md`, `docs/LUNA_TASK.md`, `docs/HANDOFF_CHECKLIST.md`, `design/REFERENCE.md`, and every file in `tests/acceptance/`.
 
 Do not begin by generating a generic landing page and attempting to retrofit it later.
+
+The design process is research-first: audience/market/language research, positioning, differentiated visual concepts, human selection, asset extraction, implementation contract, implementation, validation, production verification, transcript/archive.
 
 ## Work on a feature branch
 
@@ -53,6 +55,20 @@ npm run screenshots
 ```
 
 Then inspect desktop, tablet, and mobile screenshots. Passing automation is necessary but not sufficient.
+
+Open a pull request to `main` so the repository's `site-quality` workflow actually runs. A successful hosting/deployment status is not a substitute for the acceptance workflow.
+
+## Required completion transcript
+
+Before reporting completion, create and commit a dated transcript under:
+
+`transcripts/luna/<YYYY-MM-DD>-<project>-completion.md`
+
+Follow `transcripts/luna/README.md` and `docs/HANDOFF_CHECKLIST.md`.
+
+The transcript must record the task/prompt received, material decisions, files changed, exact commands run, validation results, screenshot review, production checks, failures/fixes, unresolved items, intentional deviations, final commit SHA, and confirmation protected acceptance files were not weakened.
+
+Do not omit failures that were later fixed. The transcript is an audit trail, not marketing copy.
 
 ## Product intent
 
